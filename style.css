@@ -1,0 +1,1076 @@
+:root {
+    --color-main: gold;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("glowna/tło.jpg");
+    background-color: rgba(255, 255, 255, 0);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.intro {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    transition: 0.5s;
+}
+
+
+.przywitanie {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-main);
+}
+
+.welcome {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+
+}
+
+.welcome.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.welcome.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+header {
+    color: var(--color-main);
+    text-align: center;
+    display: block;
+    position: relative;
+    margin-bottom: 5%;
+}
+
+header h1 {
+    font-size: 100px;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    text-align: center;
+    list-style: none;
+
+}
+
+nav a {
+    font-size: 25px;
+}
+
+nav a:visited {
+    background-color: var(--color-main);
+    color: black;
+
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+}
+
+nav a:link {
+    background-color: var(--color-main);
+    color: black;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+}
+
+nav a:active {
+    background-color: rgba(255, 217, 0, 0.596);
+}
+
+nav a:hover {
+    background-color: rgba(255, 217, 0, 0.596);
+}
+
+.kreska {
+    border: 1px solid var(--color-main);
+    width: 80%;
+
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.uklad {
+    cursor: url(glowna/rocket.svg  ), auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+
+
+}
+
+.opis {
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.opis h2 {
+    text-align: center;
+    color: var(--color-main);
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.opis p {
+    text-align: center;
+    color: var(--color-main);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.planety table,
+.planety td {
+    border-collapse: collapse;
+    color: var(--color-main);
+    border-radius: 10px;
+    text-align: left;
+
+}
+
+.planety td {
+    border: 1px solid var(--color-main);
+    width: 50%;
+
+}
+
+.planety td img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+.planety {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    float: left;
+
+}
+
+.rakieta {
+    position: relative;
+    cursor:pointer;
+
+}
+
+
+
+.planety p {
+    font-size: 25px;
+}
+
+.planety h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    float: left;
+    position: relative;
+
+}
+
+.wyswietl {
+    position: fixed;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    background: var(--color-main);
+    color: black;
+    font-size: 2.5em;
+    font-weight: 700;
+
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    padding: 5px 20px;
+}
+
+.column a:hover .wyswietl {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+
+    transform: translate(0%, -10vh);
+}
+
+.column img:hover {
+    transform: scale(1.25);
+    cursor: url(glowna/rocket.svg  ), auto;
+}
+
+.socials {
+    color: var(--color-main);
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
+
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.socials:hover {
+    color: rgba(255, 217, 0, 0.596);
+}
+
+footer {
+    text-align: center;
+    font-size: 20px;
+    color: var(--color-main);
+    width: 100%;
+
+}
+
+footer a {
+    position: relative;
+    transition: 0.5s;
+}
+
+footer a:hover {
+    transform: translateY(-20px);
+}
+
+.to-top {
+    background: var(--color-main);
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: black;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .2s;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+/* Path:logowanie.html i resjestracja.html*/
+.logowanie {
+    float: left;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bdlogowanie {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    max-width: 30%;
+    width: 100%;
+    background: rgba(255, 217, 0, 0.747);
+    border-radius: 10px;
+}
+
+.container .form {
+    padding: 40px;
+}
+
+.container .form .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 5px;
+    width: 30px;
+    background-color: black;
+    border-radius: 25px;
+}
+
+.form .input-field {
+    position: relative;
+    margin-top: 30px;
+    height: 50px;
+    width: 100%;
+
+}
+
+.input-field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-top: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.input-field i.icon {
+    left: -30px;
+}
+
+.input-field i.showHidePass {
+    right: 0px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input {
+    margin: 0px 8px -2px 4px;
+    accent-color: black;
+}
+
+.form .text {
+    color: black;
+    font-size: 14px;
+}
+
+.form a.text {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form .button {
+    margin-top: 35px;
+
+}
+
+.form .button input {
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover {
+    background-color: rgb(255, 217, 0);
+}
+
+.form .login-singup {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* logowanie popup*/
+.clickme-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+
+}
+
+.clickme-open .model {
+    height: 400px;
+    max-width: 350px;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: var(--color-main);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.clickme-open .model i {
+    font-size: 100px;
+}
+
+.clickme-open .model p i {
+    font-size: 30px;
+    color: red;
+}
+
+.clickme-open .model h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.clickme-open .model p {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.clickme-open .model button i {
+    font-size: 30px;
+    margin: 40px;
+}
+
+.clickme-open .model button {
+    font-size: 15px;
+
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-main);
+    text-align: center;
+    background-color: black;
+    border: 5px;
+    border-style: solid;
+    border-color: var(--color-main);
+    border-radius: 10px;
+
+}
+
+.clickme-open .model button:hover {
+    opacity: 0.9;
+}
+
+.clickme-open .model button i {
+    cursor: pointer;
+}
+
+.clickme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#open {
+    height: 50px;
+    width: 200px;
+    background-color: var(--color-main);
+    border-radius: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+}
+
+#open:hover {
+    letter-spacing: 3px;
+    opacity: .8;
+}
+
+/* galeria zdjec*/
+.galeria {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.zdjecia {
+
+    margin: auto;
+    height: 924px;
+
+    width: 768px;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.zdjecia .slides {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.slides img {
+    padding-top: 10px;
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
+
+    object-fit: cover;
+}
+
+.slides img:hover {
+    filter: grayscale(100%);
+}
+
+.big-screen {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 80%;
+    width: 100%;
+}
+
+.big-screen img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 2px solid var(--color-main);
+
+
+}
+
+/* Path: artykuly.html */
+
+.naglowekwiadomosci {
+    border: 5px;
+    border-style: solid;
+    border-color: var(--color-main);
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: auto;
+    background-color: rgba(255, 217, 0, 0.747);
+    text-align: center;
+
+}
+
+.naglowekwiadomosci h2 {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.artykuly {
+    width: 80%;
+    align-items: baseline;
+}
+
+.artykuly table td {
+    width: 50%;
+    text-align: center;
+}
+
+.artykuly tbody tr {
+    margin-bottom: 100px;
+}
+
+.artykuly table td h3 {
+    vertical-align: top;
+    margin: 0;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-main);
+
+}
+
+.artykuly table td h4 {
+
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-main);
+    text-align: center;
+}
+
+.artykuly table td p {
+    font-size: 20px;
+    color: var(--color-main);
+
+}
+
+.artykuly {
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 4vh;
+}
+
+.artykuly table td a {
+    font-size: 20px;
+    color: var(--color-main);
+
+}
+
+.artykuly table td a:hover {
+    font-size: 20px;
+    color: rgba(255, 217, 0, 0.486);
+
+}
+
+#more {
+    display: none;
+}
+
+/* formularz */
+
+.kontakt {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.formularz {
+    height: 100%;
+    margin-left:auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.formularz h2 {
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-main);
+    text-align: center;
+}
+
+.formularz h3 {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-main);
+    text-align: center;
+}
+
+.formularz p {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-main);
+    text-align: center;
+}
+
+.formularz a {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-main);
+    text-align: center;
+}
+
+.bdformularz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+
+}
+
+.container1 {
+    position: relative;
+    max-width: 100%;
+    width: 80%;
+    background: rgba(255, 217, 0, 0.808);
+    border-radius: 100px;
+}
+
+.container1 .forms {
+    padding: 30px;
+}
+
+.container1 .forms .title {
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.forms .finput-field {
+    position: relative;
+    margin-top: 30px;
+    height: 40px;
+    width: 100%;
+
+}
+
+
+.finput-field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-top: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.finput-field input:is(:focus, :valid) {
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.finput-field i {
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.finput-field i.icon {
+    left: -30px;
+}
+
+.finput-field i.showHidePass {
+    right: 0px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.forms .text {
+    color: black;
+    font-size: 16px;
+}
+
+.forms a.text {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+.forms a:hover {
+    text-decoration: underline;
+}
+
+.forms .button {
+    margin-top: 35px;
+
+}
+
+.forms .button input {
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    background-color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover {
+    background-color: rgb(255, 217, 0);
+}
+
+nav ul {
+    padding-inline-start: 0px;
+}
+
+/* Path: regulamin.html */
+.regulamin {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    color: var(--color-main)
+}
+
+.regulamin button {
+
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-main);
+    text-align: center;
+    background-color: rgba(255, 217, 0, 0.747);
+    border: 5px;
+    border-style: solid;
+    border-color: var(--color-main);
+    border-radius: 10px;
+    width: 30%;
+
+}
+
+.regulamintxt {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: var(--color-main);
+}
+
+.regulamintxt h3 {
+    text-align: center;
+    font-size: 60px;
+}
+
+.regulamintxt article {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.regulamintxt ul {
+    font-size: 20px;
+    text-align: justify;
+}
+
+@media only screen and (max-width:1440px) {
+
+    .planety tr img {
+        width: 100%;
+        height: 100%;
+
+    }
+
+}
+
+@media (max-width:1024px) {
+    .planety tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .uklad {
+        display: none;
+    }
+
+    .planety td {
+        width: 100%;
+
+    }
+
+    .planety tr {
+        padding: 0;
+    }
+
+    .artykuly {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 1vh;
+    }
+
+    .artykuly tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4vh;
+    }
+
+    .artykuly tr h4 {
+        display: none;
+    }
+
+    .artykuly tr img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .forms a.text {
+        font-size: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    nav ul li a {
+        list-style: none;
+        display: block;
+        padding: 10px;
+        border-radius: 100px;
+        color: var(--color-main);
+        text-decoration: none;
+        font-size: 30px;
+
+    }
+}
+
+@media screen and (max-device-width: 768px) {
+    .container {
+        max-width: 60%;
+
+    }
+}
+
+@media screen and (max-device-width: 425px) {
+    .artykuly table td p {
+        font-size: 40px;
+        color: var(--color-main);
+
+    }
+
+    .artykuly table td a {
+        font-size: 40px;
+        color: var(--color-main);
+
+    }
+
+    nav ul li {
+
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    nav ul li a {
+        font-size: 40px;
+
+    }
+
+    .planety p {
+        font-size: 50px;
+    }
+
+    .container .form .title {
+        font-size: 60px;
+    }
+
+    .form .input-field {
+        margin-top: 30px;
+        height: 60px;
+        width: 100%;
+    }
+
+    .input-field input {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        font-size: 30px;
+
+
+    }
+
+    .form .button input {
+        font-size: 40px;
+    }
+
+    .form .text {
+        color: black;
+        font-size: 25px;
+    }
+
+    .form a.text {
+
+        font-size: 25px;
+
+    }
+
+    .checkbox-content {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-device-width: 320px) {
+    .opis h2 {
+        font-size: 100px;
+    }
+
+    .opis p {
+        font-size: 50px;
+    }
+
+    footer p {
+        font-size: 50px;
+    }
+
+    .socials {
+        font-size: 150px;
+    }
+
+    .kontakt {
+        display: none;
+    }
+
+    .artykuly td img {
+        transform: scale(1.7);
+    }
+
+    .artykuly td {
+        margin-top: 10vh;
+    }
+
+    .naglowekwiadomosci h2 {
+        font-size: 60px;
+    }
+
+    .artykuly h3 {
+        font-size: 200px;
+    }
+
+}
